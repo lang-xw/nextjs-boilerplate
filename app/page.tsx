@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -11,7 +11,7 @@ import { degrees, PDFDocument } from "pdf-lib";
 // 设置PDF.js的worker路径，用于处理PDF文件
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs`;
 
-export default function Home() {
+const Home = () =>   {
     // 定义状态变量：文件、页数、旋转角度、错误信息、缩放比例
     const [file, setFile] = useState<File | null>(null);
     const [numPages, setNumPages] = useState<number | null>(null);
@@ -199,3 +199,6 @@ export default function Home() {
         </main>
     );
 }
+
+
+export default Home;
